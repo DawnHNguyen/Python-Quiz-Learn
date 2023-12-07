@@ -17,7 +17,8 @@ def extract_qa_pairs(doc_path):
         elif capturing_question:
             current_question_block += '\n' + para.text
             for run in para.runs:
-                if run.underline:
+                # If your answer is underline/bold, change if needed
+                if run.bold:
                     current_answer += run.text
 
     if capturing_question:
@@ -26,7 +27,7 @@ def extract_qa_pairs(doc_path):
     return ''.join(qa_pairs)
 
 # Path to your .docx file
-doc_path = '/home/dawn/Documents/1_so_cau_hoi_on_tap_LS.docx'
+doc_path = 'Your-file.docx'
 
 # Extract Q&A pairs
 qa_pairs = extract_qa_pairs(doc_path)
