@@ -53,6 +53,6 @@ class QuizApp(tk.Tk):
         self.update_question()
 
 if __name__ == "__main__":
-    quiz_manager = QuizManager("LSD.txt")
+    quiz_manager = QuizManager("LSD-from-Tu.txt")
     app = QuizApp(quiz_manager)
     app.mainloop()

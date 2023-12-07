@@ -11,6 +11,7 @@ class QuizManager:
         with open(filename, 'r', encoding='utf-8') as file:
             quiz_content = file.read()
             quiz_items = quiz_content.split('\n\n')
+            quiz_items = list(set(quiz_items))
             random.shuffle(quiz_items)
 
             for item in quiz_items:
